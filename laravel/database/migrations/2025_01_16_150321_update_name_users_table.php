@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('first_name')->after('id')->comment('苗字');
-            $table->string('last_name')->after('first_name')->comment('名前');
+            $table->string('first_name')->after('id')->comment('名前');
+            $table->string('last_name')->after('first_name')->comment('苗字');
 
             $table->dropColumn('name');
         });
